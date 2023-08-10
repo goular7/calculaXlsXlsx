@@ -1,0 +1,4 @@
+#alterar /home/gustavogoulart/projects/ pelo caminho do diretório 
+
+sudo find /home/gustavogoulart/projects/ -type f -exec sh -c 'for file do echo "$file" | awk -F"." '\''NF > 1 {print $NF}'\''; done' sh {} + | sort | uniq -c | awk '{sum[$2] += $1} END {for (ext in sum) {printf "%5d %s\n", sum[ext], ext}}' | sort -nr
+
