@@ -58,7 +58,15 @@ sudo apt install docker-ce
 #Verifique o serviço do docker
 sudo systemctl status docker
 
+#startar docker
+sudo service docker start
 _____________________________________________________
-Portainer
+Portainer (interface web)
+
+#criar volume
+docker volume create portainer_data
+
+
+
 
 
